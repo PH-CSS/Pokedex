@@ -1,0 +1,35 @@
+
+.pesquisa{
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(221, 152, 24);  
+  width: 0px;
+  border-radius: 50px;
+  padding: 5px 25px;
+  transition: all 2s;
+  padding: 0;
+}
+
+.pesquisa input{
+  border: none;
+  outline: none;
+  width: 0;
+  height: 1.3rem;
+  background-color: transparent;
+  transition: all 1s;
+
+}
+
+.pesquisa:hover {
+  width: 300px;
+  transition: all 2s;
+  padding: 5px 10px;
+
+}
+
+.pesquisa:hover > input{
+  width: 200px;
+  transition: all 1s;
+}

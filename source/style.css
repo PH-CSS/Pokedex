@@ -1,0 +1,158 @@
+:root{
+    --inner-size: 1200px;
+    --container:230px;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family:"Roboto Mono", monospace ;
+}
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 60%;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0000004d;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #a05454;
+    border-radius: 10px;
+    width: 200px;
+    border: 10px;
+  }
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.inner{
+    position: relative;
+    height: 100vh;
+    width: var(--inner-size);
+    padding-top: 0;
+    grid-template-columns: repeat(3, 3fr);
+}
+
+header{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerListPoke{
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    width: var(--inner-size);
+    grid-template-columns: repeat(1, 2fr);
+    justify-items:center ;
+    gap: 0 2rem;
+}
+
+@media only screen and (min-width:700px) {
+    .innerListPoke{
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start ;
+    }
+    .innerCont:nth-child(even) {
+        margin-left: 30px;
+        margin-top:10vh; 
+    }
+    
+    .innerCont:nth-child(even) .content {
+        align-items: start;
+    }
+    
+    .innerCont:nth-child(odd){
+        margin-right:30px;
+        justify-self: end;  
+        margin-bottom:10vh; 
+    }
+}
+.innerListPoke .SVGpoke{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    margin-top: -10vh;
+    margin-right: -10vw;
+    aspect-ratio: 1/1;
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+
+.innerCont{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 500px;
+    padding: 15PX;
+    margin-bottom:50px;
+    border-radius: 35px;
+}
+
+.linhaEvol{
+    display: flex;
+    opacity: 0.4;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    height:var(--container);
+    width: var(--container  ) ;
+    border-radius: 20px;
+    background-color: rgba(78, 102, 102, 0.459);
+    padding: 10px;
+}
+
+
+
+.container img{
+    height: 100%;
+    width: 100%;
+} 
+
+
+
+.pokeClass{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+    background-color: rgba(211, 189, 162, 0.237);
+    border-radius: 10px;
+
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    text-align: end;
+}

@@ -1,0 +1,109 @@
+.pokeBallBody{
+    z-index: 2;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 0, 0);
+}
+
+.upperpart{
+    width: 100%;
+    height: 60vh;
+    background-color: red;
+    display: flex;
+    align-items: end;
+}
+
+.bottompart{
+    width: 100%;
+    height: 40vh;
+    background-color: white;
+}
+
+.middlePart{
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteButton{
+    width: 250px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 25px solid black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerButton{
+    width: 125px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    animation: piscar 0.55s linear infinite alternate;
+    cursor: pointer;
+}
+
+/* bolinha no meio piscando */
+
+@keyframes piscar {
+from{
+    background-color: rgb(255, 255, 255);
+}
+to{
+    background-color: rgba(219, 44, 44, 0.777);
+}
+}
+
+/* parte vermelha */
+
+@keyframes openUp{
+from{
+    transform: translate(0, 0);
+    transition: all ease 2s;
+}
+to{
+    transform: translate(0, -100vh);
+    transition: all ease 2s;
+}
+}
+
+/* parte branca */
+
+@keyframes openDown{
+    from{
+        transform: translate(0, 0);
+        transition: all ease 2s;
+    }
+    to{
+        transform: translate(0, 100vh);
+        transition: all ease 2s;
+    }
+    }
+
+    /* parte "vermelha" de dentro (voce foi capturado)*/
+    
+    @keyframes radiusSize{
+        from{
+            visibility: visible;
+            border-radius: 0;
+        }
+        to{
+            visibility: hidden;
+            border-radius: 50%;
+            width: 0px;
+            height: 0px;
+
+        }
+    }
